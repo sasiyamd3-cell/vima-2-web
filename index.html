@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08090d">
+  <title>MIYORA | WhatsApp Pairing</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="bg-glow"></div>
+
+<header class="navbar">
+  <a class="logo" href="#">MIYORA<span>.</span></a>
+  <div class="nav-status">
+    <i></i> SYSTEM ONLINE
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="hero">
+    <div class="hero-tag">✦ NEXT GENERATION PAIRING</div>
+    <h1>Connect your<br><span>WhatsApp.</span></h1>
+    <p>Fast, secure and simple WhatsApp device pairing experience.</p>
+  </section>
+
+  <section class="pair-card">
+
+    <div class="card-heading">
+      <div>
+        <h2>Device Connection</h2>
+        <p>Choose your preferred connection method</p>
+      </div>
+      <div class="shield">♢</div>
+    </div>
+
+    <div class="tabs">
+      <button class="tab active" data-tab="pair">Pair Code</button>
+      <button class="tab" data-tab="qr">QR Code</button>
+    </div>
+
+    <div class="panel active" id="pair">
+      <label>WHATSAPP PHONE NUMBER</label>
+      <div class="phone-input">
+        <span>+</span>
+        <input id="phone" type="tel" placeholder="94771234567">
+      </div>
+      <small>Enter your number with country code. No + sign needed.</small>
+
+      <button class="primary-btn" id="pairBtn">
+        Generate Pairing Code <span>↗</span>
+      </button>
+
+      <div class="result hidden" id="pairResult">
+        <p>YOUR PAIRING CODE</p>
+        <h2 id="pairCode">--------</h2>
+        <button class="copy-btn" id="copyBtn">Copy Code</button>
+      </div>
+    </div>
+
+    <div class="panel" id="qr">
+      <div class="qr-container">
+        <div id="qrImage" class="qr-placeholder">
+          <span>QR</span>
+          <small>QR CODE WILL APPEAR HERE</small>
+        </div>
+      </div>
+      <p class="qr-info">Open WhatsApp → Linked Devices → Link a Device</p>
+      <button class="primary-btn" id="qrBtn">
+        Generate QR Code <span>↗</span>
+      </button>
+    </div>
+
+    <div class="connection-status" id="status">
+      <span class="status-dot"></span>
+      <span id="statusText">Waiting for connection</span>
+    </div>
+
+  </section>
+
+  <section class="steps">
+    <h3>How it works</h3>
+    <div class="step">
+      <span>01</span>
+      <div><b>Choose Method</b><p>Select Pair Code or QR Code.</p></div>
+    </div>
+    <div class="step">
+      <span>02</span>
+      <div><b>Connect Device</b><p>Follow the instructions shown.</p></div>
+    </div>
+    <div class="step">
+      <span>03</span>
+      <div><b>You're Connected</b><p>Complete linking in WhatsApp.</p></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="logo">MIYORA<span>.</span></div>
+  <p>Designed for a better connection.</p>
+  <small>© 2026 MIYORA. All rights reserved.</small>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
